@@ -1,11 +1,22 @@
 import React from "react";
 
-function ContactItem({ name, number }) {
+const contactItemStyle = {
+  display: "flex",
+  alignItems: "center",
+  marginBottom: "10px",
+  gap: "10px",
+};
+
+function ContactItem({ name, number, onDeleteContact }) {
   return (
-    <li>
-      {name}: {number}
+    <li style={contactItemStyle}>
+      <span>
+        {name}: {number}
+      </span>
+      <button onClick={onDeleteContact}>Delete</button>
     </li>
   );
 }
 
 export default ContactItem;
+
