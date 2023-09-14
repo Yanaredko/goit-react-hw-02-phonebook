@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const contactItemStyle = {
   display: "flex",
@@ -17,6 +18,12 @@ function ContactItem({ name, number, onDeleteContact }) {
     </li>
   );
 }
+
+ContactItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired
+};
 
 export default ContactItem;
 
